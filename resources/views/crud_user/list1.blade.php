@@ -12,7 +12,7 @@
             padding: 0;
         }
         .container {
-            width: 600px;
+            width: 1000px;
             margin: 20px auto;
             padding: 20px;
             border: 1px solid #ccc;
@@ -63,18 +63,21 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Address</th>
+                    <th>Age</th>
+                    <th>Github</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
             @foreach($users as $user)
                 <tr>
-                    <th>{{ $user->id }}</th>
+                <th>{{ $user->id }}</th>
                     <th>{{ $user->name }}</th>
-                    //
                     <th>{{ $user->email }}</th>
                     <th>{{ $user->phone }}</th>
                     <th>{{ $user->address }}</th>
+                    <th>{{ $user->age }}</th>
+                    <th>{{ $user->github }}</th>
                     <th>
                         <a href="{{ route('user.view1', ['id' => $user->id]) }}">View</a> |
                         <a href="{{ route('user.updateUser1', ['id' => $user->id]) }}">Edit</a> |
