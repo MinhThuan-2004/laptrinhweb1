@@ -77,12 +77,11 @@
                     <th>
                         <a href="{{ route('user.view1', ['id' => $user->id]) }}">View</a> |
                         <a href="{{ route('user.updateUser1', ['id' => $user->id]) }}">Edit</a> |
-                        <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
+                        <a href="{{ route('user.deleteUser1', ['id' => $user->id]) }}">Delete</a>
                     </th>
                 </tr>
             @endforeach
             </tbody>
-            <!-- Thêm các hàng khác tương tự -->
         </table>
         <div class="pagination">
             <a href="#">Previous</a>
