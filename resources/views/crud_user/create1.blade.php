@@ -78,6 +78,20 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
+                                    <input type="text" placeholder="Age" id="age" class="form-control" name="age"
+                                           required autofocus>
+                                    @if ($errors->has('age'))
+                                        <span class="text-danger">{{ $errors->first('age') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Github" id="github" class="form-control" name="github"
+                                           required autofocus>
+                                    @if ($errors->has('github'))
+                                        <span class="text-danger">{{ $errors->first('github') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
                                     <input type="password" placeholder="Password" id="password" class="form-control"
                                            name="password" required>
                                     @if ($errors->has('password'))
