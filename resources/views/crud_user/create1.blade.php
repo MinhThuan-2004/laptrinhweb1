@@ -53,7 +53,7 @@
                                     @if ($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
-                                    <label>Email</label>
+            <label>Email</label>
             <input type="text" placeholder="Email" id="email_address" class="form-control"
                                            name="email" required autofocus>
                                     @if ($errors->has('email'))

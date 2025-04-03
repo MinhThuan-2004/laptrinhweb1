@@ -55,7 +55,7 @@
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
             
-            <label>Email/label>
+            <label>Email</label>
             <input type="text" placeholder="Email" id="email_address" class="form-control"
                                            value="{{ $user->email }}"
                                            name="email" required autofocus>
