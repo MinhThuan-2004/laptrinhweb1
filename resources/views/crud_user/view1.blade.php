@@ -49,7 +49,6 @@
         <div class="info">
             <strong>Email:</strong> {{$messi->email}}
         </div>
-        <button onclick="location.href='update1'">Chỉnh sửa</button>
     </div>
 </body>
 </html>

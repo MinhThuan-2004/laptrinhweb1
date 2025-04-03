@@ -40,6 +40,7 @@
     </style>
 </head>
 <body>
+    
     <h2>Lập trình web</h2>
     <div>
         <a href="#">Home</a> | <a href="login1">Đăng nhập</a> | <a href="#">Đăng ký</a>
@@ -47,40 +48,46 @@
     <div class="container">
         <h3>Màn hình đăng ký</h3>
         <form action="{{ route('user.postUser1') }}" method="POST">
-            <label>Username</label>
-            <input type="text" placeholder="Name" id="name" class="form-control" name="name"
+                                @csrf
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Name" id="name" class="form-control" name="name"
                                            required autofocus>
                                     @if ($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
-            <label>Email</label>
-            <input type="text" placeholder="Email" id="email_address" class="form-control"
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Email" id="email_address" class="form-control"
                                            name="email" required autofocus>
                                     @if ($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
-            <label>Số điện thoại</label>
-            <input type="text" placeholder="Phone" id="phone" class="form-control" name="phone"
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Phone" id="phone" class="form-control" name="phone"
                                            required autofocus>
                                     @if ($errors->has('phone'))
                                         <span class="text-danger">{{ $errors->first('phone') }}</span>
                                     @endif
-            <label>Địa chỉ</label>
-            <input type="text" placeholder="Address" id="address" class="form-control" name="address"
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Address" id="address" class="form-control" name="address"
                                            required autofocus>
                                     @if ($errors->has('address'))
                                         <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
-            <label>Mật khẩu</label>
-            <input type="password" placeholder="Password" id="password" class="form-control"
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="password" placeholder="Password" id="password" class="form-control"
                                            name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
-            <a href="login1">Đã có tài khoản</a>
-            <div class="d-grid mx-auto">
-                <button type="submit" class="btn btn-dark btn-block">Submit</button>
-            </div>
+                                </div>
+                                <div class="d-grid mx-auto">
+                                    <button type="submit" class="btn btn-dark btn-block">Submit</button>
+                                </div>
+                            </form>
         </form>
     </div>
 </body>
